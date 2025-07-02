@@ -1,0 +1,15 @@
+# west.yml
+# Zephyr Project west manifest file
+# See: https://docs.zephyrproject.org/latest/develop/west/index.html
+
+manifest:
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: main
+      path: zephyr
+  self:
+    path: zephyr
