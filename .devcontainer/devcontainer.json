@@ -1,0 +1,20 @@
+{
+  "name": "Zephyr (ESP32/M5Stack Core2)",
+  "image": "ghcr.io/zephyrproject-rtos/zephyr-build:latest",
+  "postCreateCommand": "pip3 install west && west init -l . && west update && west zephyr-export && pip3 install -r zephyr/scripts/requirements.txt",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+        "cmake.generator": "Ninja"
+      },
+      "extensions": [
+        "ms-vscode.cmake-tools",
+        "ms-vscode.cpptools",
+        "marus25.cortex-debug",
+        "nordic-semiconductor.nrf-connect",
+        "ms-python.python"
+      ]
+    }
+  }
+}
