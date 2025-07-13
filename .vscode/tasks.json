@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Zephyr Hello World (Core2)",
+			"type": "shell",
+			"command": "west build -b m5stack_core2/esp32/procpu zephyr/samples/hello_world",
+			"group": "build",
+			"problemMatcher": [
+				"$gcc"
+			]
+		}
+	]
+}
