@@ -12,9 +12,12 @@
         "ms-vscode.cpptools",
         "marus25.cortex-debug",
         "nordic-semiconductor.nrf-connect",
-        "ms-python.python"
+        "ms-python.python",
+        "zephyrprojectrtos.west"
       ]
+    },
+    "env": {
     }
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y zsh && export RUNZSH=no CHSH=no && sh -c \"$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)\""
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y zsh && if [ -f /workspaces/zephyr/scripts/requirements.txt ]; then pip3 install -r /workspaces/zephyr/scripts/requirements.txt; fi && export RUNZSH=no CHSH=no && sh -c \"$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)\""
 }
