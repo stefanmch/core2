@@ -1,7 +1,6 @@
 {
   "name": "Zephyr (ESP32/M5Stack Core2)",
   "image": "ghcr.io/zephyrproject-rtos/zephyr-build:latest",
-  "postCreateCommand": "pip3 install west && west init -l . && west update && west zephyr-export && pip3 install -r zephyr/scripts/requirements.txt",
   "customizations": {
     "vscode": {
       "settings": {
@@ -16,5 +15,6 @@
         "ms-python.python"
       ]
     }
-  }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y zsh && export RUNZSH=no CHSH=no && sh -c \"$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)\""
 }
