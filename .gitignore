@@ -2,3 +2,5 @@ zephyr/
 .west/
 modules/
 bootloader/
+tools/
+build/
